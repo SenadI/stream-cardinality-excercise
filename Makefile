@@ -20,7 +20,7 @@ M = $(shell printf "\033[34;1m▶\033[0m")
 
 .PHONY: all
 all: fmt lint vendor | $(BASE) ; $(info $(M) building executable…) @ ## Build program binary
-	$Q cd "$(BASE)/cmd" && $(GO) build \
+	$Q cd "$(BASE)/cmd" && pwd && $(GO) build \
 		-tags release \
 		-ldflags '-X $(PACKAGE)/cmd.Version=$(VERSION) -X $(PACKAGE)/cmd.BuildDate=$(DATE)' \
 		-o $(GOPATH)/bin/$(PACKAGE) 

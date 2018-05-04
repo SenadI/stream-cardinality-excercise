@@ -164,7 +164,7 @@
     "alg",
     "kafka"
   ]
-  revision = "da7b182893770800fb8f0f64495de0921e034c0d"
+  revision = "335fbe7ab0e4fc838d2a4857dcd11081618840ff"
 
 [[projects]]
   name = "github.com/sirupsen/logrus"
