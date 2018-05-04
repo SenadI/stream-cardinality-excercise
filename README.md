@@ -37,7 +37,7 @@ There is a Makefile available with `make all`. If you select this approach the b
     ```
 
 Before running just note that here processor is equivalent to consumer. I am using the slang of the library I am using
-to provide information.
+to provide information. 
 
 - To run processor that just outputs the messages from kafka topic run
 
@@ -66,6 +66,30 @@ go run cmd/* processor-user --address localhost:9092 --topic users
 
 # Using binary
 ./.gopath~/bin/stream-cardinality-excercise processor-user --address localhost:9092
+```
+
+More about the CLI. Note that this projects builds in a single CLI. Here is a preview of 
+the options that are available to the caller
+
+```bash
+➜ .gopath\~/bin/stream-cardinality-excercise
+Demonstration of stream cardinality estimation using data that is streamed from kafka.
+
+Usage:
+  stream-cardinality-excercise [command]
+
+Available Commands:
+  help              Help about any command
+  processor-counter Process messages and outputs the frame-per-rate stats
+  processor-stdout  Process messages and outputs them to os.Stdout
+  processor-user    Process messages and count unique users per minute
+
+Flags:
+  -a, --address string   Kafka address
+  -h, --help             help for stream-cardinality-excercise
+  -t, --topic string     Kafka topic
+
+Use "stream-cardinality-excercise [command] --help" for more information about a command.
 ```
 
 ## Notes, Benchmarks, Thoughts

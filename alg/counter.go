@@ -10,7 +10,7 @@ func getHash(value string) uint32 {
 	return h.Sum32()
 }
 
-// Counter that stors unique users per minute. The main structure is a HyperLogLog plus
+// Counter that stors unique users per minute. The main structure is a HyperLogLog
 // counter and the starting epoh time - The first incoming message. This implementation
 // assumes messages are ordered.
 type Counter struct {
